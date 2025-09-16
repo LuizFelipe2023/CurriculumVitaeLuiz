@@ -1,0 +1,301 @@
+    :root {
+        --primary: #2563eb;
+        --primary-dark: #1d4ed8;
+        --secondary: #4b5563;
+        --light: #f3f4f6;
+        --dark: #1f2937;
+        --accent: #3b82f6;
+        --background: #f9fafb;
+        --card-bg: #ffffff;
+        --sidebar-bg: #1e293b;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+    }
+
+    body {
+        background: var(--background);
+        color: var(--dark);
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    .cv-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: var(--card-bg);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        background: var(--sidebar-bg);
+        color: white;
+        padding: 30px 25px;
+    }
+
+    .profile {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        margin-bottom: 20px;
+    }
+
+    .sidebar h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .sidebar h2::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: var(--primary);
+    }
+
+    .contact-info {
+        margin-bottom: 30px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .contact-icon {
+        margin-right: 12px;
+        width: 24px;
+        text-align: center;
+        color: var(--primary);
+    }
+
+    .skills {
+        margin-bottom: 30px;
+    }
+
+    .skill-item {
+        margin-bottom: 12px;
+        padding: 8px 12px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 6px;
+        transition: transform 0.2s;
+    }
+
+    .skill-item:hover {
+        background: rgba(255, 255, 255, 0.12);
+        transform: translateX(5px);
+    }
+
+    .languages {
+        margin-bottom: 20px;
+    }
+
+    .language-item {
+        margin-bottom: 12px;
+        padding: 8px 12px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 6px;
+    }
+
+    /* Main Content */
+    .main-content {
+        padding: 40px;
+    }
+
+    .name-title {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid var(--light);
+    }
+
+    .name-title h1 {
+        font-size: 32px;
+        color: var(--primary);
+        margin-bottom: 5px;
+    }
+
+    .name-title h2 {
+        font-size: 20px;
+        color: var(--secondary);
+        font-weight: 500;
+    }
+
+    .section {
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 20px;
+        color: var(--primary);
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid var(--light);
+        position: relative;
+    }
+
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        background: var(--primary);
+    }
+
+    .about,
+    .objective {
+        margin-bottom: 25px;
+        line-height: 1.7;
+    }
+
+    .timeline-item {
+        margin-bottom: 20px;
+        position: relative;
+        padding-left: 20px;
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--primary);
+    }
+
+    .timeline-item::after {
+        content: '';
+        position: absolute;
+        left: 4px;
+        top: 23px;
+        width: 2px;
+        height: calc(100% - 10px);
+        background: var(--primary);
+    }
+
+    .timeline-item:last-child::after {
+        display: none;
+    }
+
+    .timeline-date {
+        font-size: 14px;
+        color: var(--primary);
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    .timeline-title {
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: var(--dark);
+    }
+
+    .timeline-subtitle {
+        font-size: 15px;
+        color: var(--secondary);
+        margin-bottom: 8px;
+    }
+
+    .timeline-content {
+        font-size: 14px;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .project-card {
+        background: var(--light);
+        padding: 15px;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+        border-left: 4px solid var(--primary);
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card h4 {
+        margin-bottom: 10px;
+        color: var(--primary);
+    }
+
+    .project-card p {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .project-link {
+        display: inline-flex;
+        align-items: center;
+        color: var(--primary);
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    .project-link i {
+        margin-right: 5px;
+    }
+
+    .project-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsividade */
+    @media (max-width: 900px) {
+        .cv-container {
+            grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+            text-align: center;
+        }
+
+        .sidebar h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .main-content {
+            padding: 25px;
+        }
+
+        .name-title h1 {
+            font-size: 28px;
+        }
+    }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coléra - Pela Paz em Todo Mundo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="navbar">
+            <div class="navbar-title">
+                <h2 class="title"><i class="fas fa-volume-up"></i> Coléra</h2>
+            </div>
+            <div class="navbar-content">
+                <ul class="navbar-links">
+                    <li class="navbar-link"><a href="#"><i class="fas fa-home"></i> Início</a></li>
+                    <li class="navbar-link"><a href="#"><i class="fas fa-history"></i> História</a></li>
+                    <li class="navbar-link"><a href="#"><i class="fas fa-compact-disc"></i> Discografia</a></li>
+                    <li class="navbar-link"><a href="#"><i class="fas fa-calendar-alt"></i> Shows</a></li>
+                    <li class="navbar-link"><a href="#"><i class="fas fa-images"></i> Fotos</a></li>
+                    <li class="navbar-link"><a href="#"><i class="fas fa-newspaper"></i> Notícias</a></li>
+                    <li class="navbar-link"><a href="#"><i class="fas fa-store"></i> Loja</a></li>
+                    <li class="navbar-link"><a href="#"><i class="fas fa-envelope"></i> Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="card-banner">
+            <img src="colera.jpg" alt="" class="card-banner-img">
+        </div>
+        <div class="card-img-subtitle">
+            <p class="subtitle">Colera - Pela Paz em Todo Mundo</p>
+        </div>
+
+        <div class="card-content-band">
+            <p class="biography">Pela Paz em Todo Mundo é o segundo álbum de estúdio da banda de punk rock brasileira
+                Cólera, lançado em formato LP pelo selo Ataque Frontal em 1986. Vendeu 85.000 cópias. Foi relançado em
+                CD tendo como faixas-bônus o EP Dê o Fora de 1986. Em julho de 2016, foi eleito pela revista Rolling
+                Stone Brasil como o 2º melhor disco de punk rock do Brasil.</p>
+        </div>
+
+        <div class="disc-info">
+            <div class="track-listing">
+                <h3 class="section-title">Faixas</h3>
+
+                <div class="side-tracks">
+                    <h4 class="side-title">Lado A</h4>
+                    <ol class="track-list">
+                        <li class="track-item">"Medo"</li>
+                        <li class="track-item">"Funcionários"</li>
+                        <li class="track-item">"Somos Vivos"</li>
+                        <li class="track-item">"Alternar"</li>
+                        <li class="track-item">"Multidões"</li>
+                        <li class="track-item">"Direitos Humanos"</li>
+                        <li class="track-item">"Guerrear"</li>
+                    </ol>
+                </div>
+
+                <div class="side-tracks">
+                    <h4 class="side-title">Lado B</h4>
+                    <ol class="track-list" start="8">
+                        <li class="track-item">"Vivo na Cidade"</li>
+                        <li class="track-item">"Humanidade"</li>
+                        <li class="track-item">"Alucinado"</li>
+                        <li class="track-item">"Continência"</li>
+                        <li class="track-item">"Não Fome!"</li>
+                        <li class="track-item">"Adolescente"</li>
+                        <li class="track-item">"Pela Paz"</li>
+                    </ol>
+                </div>
+
+                <div class="bonus-tracks">
+                    <h4 class="side-title">Faixas-bônus do CD</h4>
+                    <ul class="track-list">
+                        <li class="track-item">"Em Setembro"</li>
+                        <li class="track-item">"Senhor Dirigente"</li>
+                        <li class="track-item">"Dê o Fora"</li>
+                        <li class="track-item">"Vida Desgraçada"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="band-members">
+                <h3 class="section-title">Integrantes</h3>
+                <ul class="members-list">
+                    <li class="member-item">
+                        <i class="fas fa-microphone"></i>
+                        <span class="member-name">Redson</span> - <span class="member-role">vocal/guitarra</span>
+                    </li>
+                    <li class="member-item">
+                        <i class="fas fa-drum"></i>
+                        <span class="member-name">Pierre</span> - <span class="member-role">bateria</span>
+                    </li>
+                    <li class="member-item">
+                        <i class="fas fa-guitar"></i>
+                        <span class="member-name">Val</span> - <span class="member-role">baixo</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.navbar-toggle').addEventListener('click', function () {
+            document.querySelector('.navbar-links').classList.toggle('active');
+        });
+
+        document.querySelectorAll('.navbar-link a').forEach(link => {
+            link.addEventListener('click', function () {
+                document.querySelector('.navbar-links').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
